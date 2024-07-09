@@ -1,0 +1,64 @@
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero>div:first-of-type div:last-of-type span:last-of-type {
+        display: none;
+    }
+
+    .hero>div:first-of-type div:last-of-type span:first-of-type {
+        gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero>div:first-of-type div:last-of-type span:last-of-type {
+        display: none;
+    }
+
+    .hero>div:first-of-type div:last-of-type span:first-of-type {
+        gap: 50px;
+    }
+
+    img[src="assesstes/mootoor.svg"] {
+        width: 500px;
+    }
+
+    nav+button {
+        display: none;
+    }
+
+    nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -50%;
+        transition: all .3s ease;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        cursor: pointer;
+        justify-content: space-between;
+    }
+
+    .menu span {
+        display: inline-block;
+        width: 50px;
+        height: 5px;
+        border-radius:50px ;
+        background-color: var(--Blackcolor);
+        transition: all .4s ease;
+    }
+}

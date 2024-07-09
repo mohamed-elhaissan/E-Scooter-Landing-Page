@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --mainColor: #fff;
+    --Blackcolor: #000;
+    --Graycolor: #DBDBDB;
+    --fontColor: #42454A;
+    --greencolor: #718176;
+    --boxshadow: 0px 10px 30px rgba(0, 0, 0, .1);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    margin: 40px 40px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.2);
+    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header,
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    margin: 0px 20px;
+}
+
+a {
+    color: var(--fontColor);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--greencolor);
+}
+
+button {
+    padding: 10px 30px;
+    font-weight: 500;
+    border: 1px solid black;
+    background-color: var(--fontColor);
+    color: var(--mainColor);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    opacity: .9;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero>div:first-of-type h2 {
+    font-size: 90px;
+    color: var(--fontColor);
+    font-weight: 400;
+    margin: 20px 0px;
+}
+
+.hero>div:first-of-type h2 span {
+    font-weight: 800;
+}
+
+.hero>div:first-of-type div:first-of-type {
+    height: 5px;
+    width: 50%;
+    background-color: var(--fontColor);
+    border-radius: 40px;
+    margin: 50px 0px;
+}
+
+.hero>div:first-of-type p {
+    font-size: 20px;
+    color: var(--fontColor);
+}
+
+.hero>div:first-of-type div:last-of-type,
+.hero>div:first-of-type div:last-of-type span {
+    display: flex;
+    margin: 40px 5px;
+
+    align-items: center;
+}
+
+.hero>div:first-of-type div:last-of-type span:last-of-type h4 {
+    width: 20%;
+    font-size: 18px;
+
+}
+
+.hero>div:first-of-type div:last-of-type {
+    gap: 40px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+ion-icon[name="arrow-forward-outline"] {
+    background-color: var(--fontColor);
+    padding: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+img[src="assesstes/circle.svg"] {
+    animation: cicle 10s linear infinite;
+}
+
+@keyframes cicle {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.hero>div:last-of-type div {
+    position: relative;
+}
+
+.hero>div:last-of-type span {
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    right: -40%;
+    top: 0;
+    width: 100%;
+    background-color: var(--Graycolor);
+    z-index: -1;
+    border-radius: 50% 0px 0px 50%;
+}
+
+.menu {
+    display: none;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.features div {
+    padding: 40px;
+    box-shadow: var(--boxshadow);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+.features div::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: var(--Graycolor);
+    border-radius: 50%;
+    z-index: -1;
+    transform: translateX(0);
+}
+
+
+.features div h3 {
+    font-size: 40px;
+}
+
+.features div h3 span {
+    font-size: 18px;
+}
+
+.features div p {
+    margin-top: 10px;
+    font-size: 13px;
+}
